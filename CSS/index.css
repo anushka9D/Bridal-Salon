@@ -1,0 +1,656 @@
+:root {
+    --golde: #D4AF37;
+    --white: #ffffff;
+    --dark_golde: #aea168;
+    --light_golde: #F1E1C6;
+    --white1: #FFFFF0;
+    --dark_blue: #272d4b;
+  }
+
+/* -------------- General Reset and Box Sizing --------------  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------  Body and background --------------  */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+}
+
+/* --------------  Navigation Bar Styling --------------  */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--golde);
+}
+.navbar-brand:hover {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--golde);
+}
+
+.navbar-toggler{
+    color: var(--white1);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--white1);
+    border-radius: 5px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: var(--golde);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--dark_golde);
+}
+
+.nav-item{
+    height:max-content;
+}
+
+.navbar {
+    background-color: var(--dark_blue);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    height: 90vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 20%;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption .highlight {
+    color: #ff6b6b;
+}
+
+.custom-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.custom-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+
+/* -------------- slide bar responsive -------------- */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/*
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}*/
+
+/* --------------  Adjust font sizes for smaller screens --------------  */
+@media (max-width: 767px) {
+
+    .carousel-caption {
+        padding: 1rem;
+        width: 70%;
+        margin-bottom: 120%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption .custom-btn {
+        padding: 8px 20px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .carousel-item {
+        height: 10vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        background-size: cover;
+    }
+    
+    .carousel-caption {
+        padding: 1rem;
+        width: 70%;
+        margin-bottom: 9%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    .carousel-caption .custom-btn {
+        padding: 6px 15px;
+    }
+}
+
+
+/* --------------  Header Styling --------------  */
+.slide1 {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    background-image: url('../Image/expert.jpg'); /* Add a subtle lace pattern image if desired */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --------------  Salon Name Styling --------------  */
+.salon-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+/* --------------  Tagline Styling --------------  */
+.tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: var(--dark_golde);
+    margin-bottom: 20px;
+}
+
+/* --------------  Gold Accent Line --------------  */
+.gold-line {
+    width: 80%;
+    height: 3px;
+    background-color: #D4AF37;
+    margin: 20px auto;
+}
+
+/* --------------  CTA Button Styling --------------  */
+.cta-button {
+    display: inline-block;
+    background-color: #F1E1C6;
+    color: #D4AF37;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+/* --------------  Hover effect for CTA button --------------  */
+.cta-button:hover {
+    background-color: #D4AF37;
+    color: #FFFFFF;
+}
+
+
+
+/* --------------  Responsive Design --------------  */
+@media (max-width: 768px) {
+    .salon-name {
+        font-size: 48px;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    .nav-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .salon-name {
+        font-size: 36px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* -------------- Expert  section --------------  */
+
+.expert-stylist {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+.expert-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--golde);
+    margin-bottom: 20px;
+}
+
+.stylist-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 12%;
+    flex-wrap: wrap; /* Allows flex items to wrap */
+}
+
+.stylist-info {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.stylist-photo {
+    width: 500px;
+    height: auto;
+
+    border-radius: 10px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.expert-sub-title {
+    font-size: 1.5rem;
+    color: #ffcc49;
+}
+
+.expert-details {
+    line-height: 1.6;
+    color: var(--dark_golde);
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .stylist-profile {
+        flex-direction: column; /* Stacks items on small screens */
+        align-items: center; /* Center aligns the items */
+    }
+    .stylist-photo {
+        margin-top: 20px; /* Adds space between text and image */
+        width: 100%; /* Makes the image full width */
+        max-width: 300px; /* Limits the maximum width */
+    }
+}
+
+
+/* -------------- FAQ Section -------------- */
+
+.faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    color: var(--golde);
+}
+
+.faq-item {
+    margin: 10px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-answer {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    border-top: none;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+.faq-icon {
+    font-size: 1.5em;
+    color: var(--dark_golde);
+}
+
+
+
+/* --------------  Map section --------------  */
+
+
+.maps-container {
+    display: flex;
+    min-height: 90vh;
+}
+
+.sidebar {
+    width: 400px;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.map-container {
+    flex: 1;
+    background-color: #eee;
+    position: relative;
+}
+
+.business-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #ffd700;
+    margin-right: 10px;
+}
+
+.reviews {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.directions-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #1a73e8;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    margin-top: 40px;
+}
+
+.contact-details h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.contact-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-value {
+    color: #666;
+}
+
+.contact-value a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Make sidebar full width on smaller screens */
+        margin-bottom: 20px; /* Add margin below sidebar */
+    }
+
+    .maps-container {
+        flex-direction: column; /* Stack sidebar and map vertically on small screens */
+    }
+
+    .business-name {
+        font-size: 20px;
+    }
+
+    .rating {
+        flex-direction: column; /* Stack the stars and the link vertically */
+        align-items: flex-start;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 400px; /* Adjust map height for smaller screens */
+    }
+
+    .directions-btn {
+        width: 100%; /* Make the button full-width */
+        text-align: center;
+    }
+
+    .contact-details h2 {
+        font-size: 18px;
+    }
+
+    .contact-item {
+        font-size: 14px; /* Make text smaller for better readability */
+    }
+
+    .contact-label {
+        font-size: 14px;
+    }
+
+    .contact-value {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-name {
+        font-size: 18px;
+    }
+
+    .rating {
+        font-size: 14px;
+    }
+
+    .map-container {
+        height: 300px; /* Further adjust map height on very small screens */
+    }
+}
+
+/* --------------  Footer customization --------------  */
+  .footer {
+    background-color: var(--dark_blue);
+    color: var(--white);
+    padding: 20px 100px 20px 100px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo{
+    padding-right: 20%;
+  }
+  
+  .footer-logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+  }
+
+  .footer-small-paragraph{
+    width: 50%;
+  }
+
+  .footer-links{
+    padding-right: 20%;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+  }
+  
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-links ul li a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact p {
+    margin: 5px 0;
+  }
+
+  .footer-contact i {
+    color: var(--white);
+    font-size: 1.6rem;
+    padding-right: 1%;
+  }
+  
+  .footer-bottom {
+    color: var(--white);
+    background-color: #222;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-logo, .footer-links, .footer-contact {
+      margin-bottom: 20px;
+    }
+  }
+  
+/* --------------  Arrow Up Section --------------  */
+
+.go-top-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px; /*size*/
+    width: 50px;
+    background: var(--golde);
+    border: 3px solid var(--golde);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .go-top-btn img {
+    width: 25px; /*size*/
+    height: 25px;
+    
+  }

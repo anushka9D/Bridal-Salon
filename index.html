@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Salon</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <script src="Script/animation.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bridal Salon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <button class="go-top-btn">
+         <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+      </button>
+
+    <!-- Slide show section -->
+    <div id="mainCarousel" class="carousel slide main-slide-bar" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+        </div>
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Image/Slide-bar/1.jpg" class="d-block w-100" alt="Spa Treatment">
+                <div class="carousel-caption">
+                    <h2>FACIAL <span class="highlight">SKIN CARE</span></h2>
+                    <p>An exceptional range of health and beauty treatments designed to promote feeling of well being and general good health.</p>
+                    <a href="#" class="custom-btn">See Our Skin Care Treatments →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Image/Slide-bar/2.jpg" class="d-block w-100" alt="Wellness Services">
+                <div class="carousel-caption">
+                    <h2>WELLNESS <span class="highlight">SERVICES</span></h2>
+                    <p>Discover our comprehensive wellness treatments designed to rejuvenate your body and mind.</p>
+                    <a href="#" class="custom-btn">Explore Our Services →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Image/Slide-bar/3.jpg" class="d-block w-100" alt="Wellness Services">
+                <div class="carousel-caption">
+                    <h2>WELLNESS <span class="highlight">SERVICES</span></h2>
+                    <p>Discover our comprehensive wellness treatments designed to rejuvenate your body and mind.</p>
+                    <a href="#" class="custom-btn">Explore Our Services →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Image/Slide-bar/4.jpg" class="d-block w-100" alt="Wellness Services">
+                <div class="carousel-caption">
+                    <h2>WELLNESS <span class="highlight">SERVICES</span></h2>
+                    <p>Discover our comprehensive wellness treatments designed to rejuvenate your body and mind.</p>
+                    <a href="#" class="custom-btn">Explore Our Services →</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Image/Slide-bar/5.jpg" class="d-block w-100" alt="Wellness Services">
+                <div class="carousel-caption">
+                    <h2>WELLNESS <span class="highlight">SERVICES</span></h2>
+                    <p>Discover our comprehensive wellness treatments designed to rejuvenate your body and mind.</p>
+                    <a href="#" class="custom-btn">Explore Our Services →</a>
+                </div>
+            </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div style="height: 100px;"></div>
+
+    <section class="expert-stylist">
+        <h2 class="expert-title">MEET OUR EXPERT STYLIST</h2>
+        <div class="stylist-profile">
+            <div class="stylist-info">
+                <h3 class="expert-sub-title">Neeliya Mendis</h3>
+                <p class="expert-details">Neeliya brings more than 25 years of experience to the field of bridal dressing and has the ability to showcase all her expertise in almost every bridal type, be it Western, Indian, Kandyan, Tamil or Muslim. Neeliya is a bridal dressing extraordinaire known for her talents and expertise when it comes to creating sensational bridal looks for every occasion.</p>
+                <p class="expert-details">However, when it comes to the bride herself, how she appears on her wedding day holds a great importance for her. Every bride wants to look astonishingly beautiful on her wedding day. Hence, an experienced make-up artist and bridal dresser play a crucial role in making or breaking the glorious wedding look of a bride.</p>
+                <p class="expert-details">Believe it or not, with Neeliya as your bridal dresser, comes a greater value for money. Neeliya allows all her clients’ associates to relax and truly enjoy themselves. This allows your event planner to focus on other matters instead of your appearance on the big day. The dressing process will not be a source of stress for the bride’s mother or the bridal party. In addition, your photographer will also experience Neeliya’s service as a blessing since it is a guarantee that every single strand of hair will be in place, the train is placed just where it should be, and that every bridesmaid has her bouquet for the photos.</p>
+                <p class="expert-details">Neeliya is a Bridal “Architect” with a passion to make sure that all aspects of her clients’ are perfect. Her attention to detail, combined with her impeccable taste and personal style, makes for an invaluable service that every bride should consider for her big day. She is authentically professional, adorable, and often comes with a bag of magic accessories for all of those last-minute mishaps which you never expect would happen.</p>
+                <p class="expert-details">What more, she was also a member of the group of Beauticians that managed to put Sri Lanka ahead of all other nations in the world when it came to exhibiting "The most number of Brides in a Bridal Fashion Show."</p>
+            </div>
+            <img src="Image/salon.jpg" alt="Neeliya Mendis" class="stylist-photo">
+        </div>
+    </section>
+
+    <div style="height: 100px;"></div>
+
+    <section class="slide1">
+        <div class="container1">
+            <h1 class="salon-name">The experienced Hair & Beauty Salon in Sri Lanka</h1>
+            <div class="gold-line"></div>
+            <p class="tagline">From the very first smile you can be sure this is going to be a really special experience.</p>
+            <br/>
+            <p class="tagline">As a guest of or salon, you will receive the best professional service for hair and beauty treatments. Our help and advice will make sure you feel your best until your next visit, which we will always be happy to arrange before you leave.</p>
+            <br/>
+            <p class="tagline">We want you to look and feel great, both in our salon and out of it. That's our passion and that's our promise.</p>
+            <a href="#" class="cta-button">Read More →</a>
+        </div>
+    </section>
+    
+
+    <div style="height: 100px;"></div>
+
+    <section class="faq-container">
+        <h2 class="faq-title">FAQs</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Is Dhananjaya Bandara Open on Sundays and public holidays?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Yes, we are open on Sundays and public holidays.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>How can I make a tentative Reservation?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">We can do a tentative reservation over the phone. It will only be valid for one week. Within this week, you have to conform the reservation by making an advance payment.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>I made a tentative reservation; how can I book the same date again?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">You can contact us again to re-confirm your preferred date.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Can I get the Quotation over the phone?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Yes, we can provide quotations over the phone.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Do you have a wedding package?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Yes, we offer various wedding packages tailored to your requirements.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Do I have to come to your Studio to get a dress?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">While we recommend visiting the studio for fittings, we can arrange consultations remotely.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Do you charge for the appointments?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">We do have a nominal charge for appointments which will be credited towards your final booking.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Will Dhananjaya come for the Dressing for the Going away?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Yes, Dhananjaya will personally oversee the dressing for your going away event.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <span>Do I need to pay transport for Going Away dressing?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">Transport charges may apply depending on the location.</div>
+        </div>
+    </section>
+    
+    <script>
+    function toggleAnswer(questionElement) {
+        const answerElement = questionElement.nextElementSibling;
+        const icon = questionElement.querySelector('.faq-icon');
+      
+        answerElement.classList.toggle('show');
+        icon.textContent = answerElement.classList.contains('show') ? '−' : '+';
+    }
+    </script>
+    
+    
+
+    <div style="height: 100px;"></div>
+
+    <div class="maps-container">
+        <div class="sidebar">
+            <h1 class="business-name">Wariyapola</h1>
+            <div class="rating">
+                <div class="stars">★★★★</div>
+                <a href="#" class="reviews">View details</a>
+            </div>
+            <a href="#" class="directions-btn">Directions</a>
+            
+            <div class="contact-details">
+                <h2>LOCATION DETAILS</h2>
+                <div class="contact-item">
+                    <div class="contact-label">Address:</div>
+                    <div class="contact-value">Wariyapola, Sri Lanka</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Phone:</div>
+                    <div class="contact-value">0712345678</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Email:</div>
+                    <div class="contact-value">hello@gmail.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script>
+        function initMap() {
+            // Coordinates for Wariyapola, Sri Lanka
+            const location = { lat: 7.6239144, lng: 80.2433145 };
+            
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14, // Adjusted zoom level to show more of the area
+                center: location,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true,
+                zoomControl: true,
+            });
+
+            // Add marker for Wariyapola
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Wariyapola'
+            });
+
+            // Add click handler for directions button
+            document.querySelector('.directions-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`);
+            });
+        }
+
+        // Initialize the map when the page loads
+        window.onload = initMap;
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="Image/logo.png" alt="">
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@company.com</p>
+            <p>Phone: +123 456 789</p>
+            <p>Address: 123 Street Name, City, Country</p>
+            <br/>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Bridal Salon. All Rights Reserved.</p>
+      </div>
+
+    <script>
+        ScrollReveal({ 
+        //reset: true,
+        distance: '60px',
+        duration:2500,
+        delay:400
+        });
+      
+        ScrollReveal().reveal('.gold-line, .expert-sub-title, .expert-details, .footer-logo', { delay: 500, origin:'left' });
+        ScrollReveal().reveal('.salon-name, .cta-button', { delay: 600, origin:'bottom' });
+        ScrollReveal().reveal('.stylist-photo', { delay: 700, origin:'right' });
+        ScrollReveal().reveal('.faq-question, .footer-links', { delay: 500, origin:'bottom',interval: 200 });
+        ScrollReveal().reveal('.expert-title, .faq-title', { delay: 500, origin:'top' });
+        ScrollReveal().reveal('.tagline, .footer-contact', { delay: 500, origin:'right',interval: 200 });
+      
+      </script>
+      
+
+    <!-- Bootstrap JS, Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="Script/arrowup.js"></script>
+</body>
+</html>
