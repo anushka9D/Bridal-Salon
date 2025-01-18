@@ -482,7 +482,7 @@ body {
     text-decoration: none;
 }
 
-#map {
+.map-view {
     position: absolute;
     top: 0;
     left: 0;
