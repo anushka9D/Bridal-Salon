@@ -1,26 +1,58 @@
 :root {
     --golde: #D4AF37;
     --white: #ffffff;
-    --dark_golde: #aea168;
+    --dark_golde: #8B6B2E;
     --light_golde: #F1E1C6;
     --white1: #FFFFF0;
     --dark_blue: #272d4b;
   }
 
-/* -------------- General Reset and Box Sizing --------------  */
+/* -------------------- General Reset and Box Sizing , Body and background -------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* --------------  Body and background --------------  */
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--white);
 }
 
-/* --------------  Navigation Bar Styling --------------  */
+.main-titles {
+    text-align: center;
+    color: var(--golde);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: 'Georgia', serif;
+}
+
+.main-titles::before,
+.main-titles::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: var(--golde);
+    margin: 0 20px;
+    vertical-align: middle;
+}
+ 
+@media (max-width: 768px) {
+
+    .main-titles {
+        font-size: 2rem;
+    }
+
+    .main-titles::before,
+    .main-titles::after {
+        width: 50px;
+        margin: 0 10px;
+    }
+}
+
+/* --------------------  Navigation Bar Styling --------------------  */
 .navbar-brand {
     font-weight: bold;
     font-size: 1.8rem;
@@ -105,7 +137,7 @@ body {
 }
 
 
-/* -------------- slide bar responsive -------------- */
+/* -------------------- slide bar responsive -------------------- */
 .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
@@ -127,7 +159,6 @@ body {
     margin: 0 auto;
 }*/
 
-/* --------------  Adjust font sizes for smaller screens --------------  */
 @media (max-width: 767px) {
 
     .carousel-caption {
@@ -183,7 +214,7 @@ body {
 }
 
 
-/* --------------  Header Styling --------------  */
+/* --------------------  More Styling --------------------  */
 .slide1 {
     background-color: #FFFFFF;
     padding: 40px 20px;
@@ -200,7 +231,6 @@ body {
     padding: 0 15px;
 }
 
-/* --------------  Salon Name Styling --------------  */
 .salon-name {
     font-family: 'Playfair Display', serif;
     font-size: 60px;
@@ -208,7 +238,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* --------------  Tagline Styling --------------  */
 .tagline {
     font-family: 'Dancing Script', cursive;
     font-size: 24px;
@@ -216,7 +245,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* --------------  Gold Accent Line --------------  */
 .gold-line {
     width: 80%;
     height: 3px;
@@ -224,7 +252,7 @@ body {
     margin: 20px auto;
 }
 
-/* --------------  CTA Button Styling --------------  */
+
 .cta-button {
     display: inline-block;
     background-color: #F1E1C6;
@@ -237,15 +265,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* --------------  Hover effect for CTA button --------------  */
 .cta-button:hover {
     background-color: #D4AF37;
     color: #FFFFFF;
 }
 
-
-
-/* --------------  Responsive Design --------------  */
 @media (max-width: 768px) {
     .salon-name {
         font-size: 48px;
@@ -285,66 +309,255 @@ body {
     }
 }
 
-/* -------------- Expert  section --------------  */
-
-.expert-stylist {
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-}
-
-.expert-title {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--golde);
-    margin-bottom: 20px;
-}
-
-.stylist-profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 12%;
-    flex-wrap: wrap; /* Allows flex items to wrap */
-}
-
-.stylist-info {
-    max-width: 600px;
-    margin-right: 20px;
-}
-
-.stylist-photo {
-    width: 500px;
-    height: auto;
-
-    border-radius: 10px;
-    flex-shrink: 0; /* Prevents image from shrinking */
-}
+/* -------------------- Expert  section --------------------  */
 
 .expert-sub-title {
     font-size: 1.5rem;
     color: #ffcc49;
 }
 
-.expert-details {
-    line-height: 1.6;
+.biography-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.bio-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.bio-image {
+    flex: 0 0 45%;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.bio-text {
+    flex: 0 0 55%;
+}
+
+.bio-text p {
     color: var(--dark_golde);
-    margin-bottom: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
-    .stylist-profile {
-        flex-direction: column; /* Stacks items on small screens */
-        align-items: center; /* Center aligns the items */
+    .bio-content {
+        flex-direction: column;
+        gap: 20px;
     }
-    .stylist-photo {
-        margin-top: 20px; /* Adds space between text and image */
-        width: 100%; /* Makes the image full width */
-        max-width: 300px; /* Limits the maximum width */
+
+    .bio-image,
+    .bio-text {
+        flex: 0 0 100%;
+    }
+
+    .title::before,
+    .title::after {
+        width: 50px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .bio-text p {
+        font-size: 0.95rem;
+    }
+    
+    .bio-image img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
+/* -------------------- Gallery Section -------------------- */
 
-/* -------------- FAQ Section -------------- */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.gallery-title {
+    text-align: center;
+    color: #8B6B2E;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery-title::before,
+.gallery-title::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #8B6B2E;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.gallery-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.gallery-item {
+    min-width: calc((100% - 40px) / 3);
+    aspect-ratio: 4/3;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.nav-button {
+    color: #8B6B2E;
+    background: none;
+    border: 1px solid #8B6B2E;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #8B6B2E;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        min-width: 100%;
+        aspect-ratio: 3/4;
+    }
+
+    .gallery {
+        gap: 1;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .gallery-title::before,
+    .gallery-title::after {
+        width: 50px;
+        margin: 0 10px;
+    }
+
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* -------------------- Services Section -------------------- */
+
+.service-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-block {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.service-photo {
+    width: 40%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.service-content {
+    width: 60%;
+}
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.service-header {
+    background-color: #b5a57f;
+    color: white;
+    padding: 8px;
+}
+.service-header-price {
+    text-align: end;
+}
+
+.service-row {
+    border-bottom: 1px solid #eee;
+}
+
+.service-row:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.service-cell {
+    padding: 8px;
+    color: #444;
+}
+
+.service-price {
+    text-align: right;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .service-block {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .service-photo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .service-content {
+        width: 100%;
+    }
+}
+
+/* -------------------- FAQ Section -------------------- */
 
 .faq-container {
     max-width: 800px;
@@ -353,14 +566,6 @@ body {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.faq-title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    font-family: 'Georgia', serif;
-    color: var(--golde);
 }
 
 .faq-item {
@@ -401,9 +606,177 @@ body {
     color: var(--dark_golde);
 }
 
+/* --------------------  TESTIMONIALS section --------------------  */
+
+.testimonials-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.testimonial.active {
+    opacity: 1;
+    position: relative;
+}
+
+.testimonial-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #666;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.testimonial-nav-button {
+    background-color: #8B7355;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.testimonial-nav-button:hover {
+    background-color: #6B5335;
+    transform: scale(1.1);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: #8B7355;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-nav-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-nav {
+        display: none;
+    }
+
+    .testimonial-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .dot {
+        width: 12px; 
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .testimonial-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonial-name {
+        font-size: 1.2rem;
+    }
+
+    .testimonial {
+        padding: 10px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) {
+    .slider-nav {
+        display: none; /* Hide arrows on touch devices */
+    }
+
+    .dot {
+        padding: 8px; /* Larger touch target */
+        margin: 0 8px;
+    }
+}
 
 
-/* --------------  Map section --------------  */
+/* --------------------  Map section --------------------  */
 
 
 .maps-container {
@@ -490,7 +863,6 @@ body {
     height: 100%;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%; /* Make sidebar full width on smaller screens */
@@ -551,7 +923,7 @@ body {
     }
 }
 
-/* --------------  Footer customization --------------  */
+/* --------------------  Footer customization --------------------  */
   .footer {
     background-color: var(--dark_blue);
     color: var(--white);
@@ -631,7 +1003,7 @@ body {
     }
   }
   
-/* --------------  Arrow Up Section --------------  */
+/* --------------------  Arrow Up Section --------------------  */
 
 .go-top-btn {
     position: fixed;
